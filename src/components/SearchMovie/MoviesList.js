@@ -19,6 +19,9 @@ class MoviesList extends Component {
         NotificationManager.error('Something went wrong.', 'Error')
     }
 
+    componentDidMount() {
+    }
+
     render() {
         const { movies } = this.props;
         return (
@@ -41,8 +44,8 @@ class MoviesList extends Component {
 }
 
 const mapStateToProps = ({ moviesApp }) => {
-    const { loading, movies } = moviesApp;
-    return { loading, movies };
+    const { loading, movies, acta } = moviesApp;
+    return { loading, movies, acta };
  }
  
  export default connect(mapStateToProps, {
