@@ -11691,6 +11691,19 @@ address span {
   background: white;
   height: 100%; }
 
+.right {
+  left: 30%; }
+
+.background-griss {
+  background-color: #f2f2f2; }
+
+.label {
+  font-weight: bold; }
+
+@media (max-width: 500px) {
+  .right {
+    left: 5%; } }
+
 .ais-Breadcrumb-list,
 .ais-CurrentRefinements-list,
 .ais-HierarchicalMenu-list,
