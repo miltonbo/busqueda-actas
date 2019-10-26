@@ -53,7 +53,7 @@ export default class Movie extends Component {
         return (
             <div className={"p-0 " + className} >
                 <Card className={"card-container m-5"} >
-                    <img src={imageNotFound ? notFoundImage : 'https://computo.oep.org.bo/resul/imgActa/' + movie + '1.jpg'}
+                    <img src={imageNotFound ? notFoundImage : 'https://computo.oep.org.bo/resul/imgActa/' + movie + '1.jpg?cache=' + new Date().getTime()}
                         alt={movie}
                         className="img-fluid d-block"
                         onError={this.onImageLoadError}
@@ -68,7 +68,7 @@ export default class Movie extends Component {
                 <div
                     className="fullscreen"
                 >
-                    <img src={imageNotFound ? notFoundImage : 'https://computo.oep.org.bo/resul/imgActa/' + movie + '1.jpg'}
+                    <img src={imageNotFound ? notFoundImage : 'https://computo.oep.org.bo/resul/imgActa/' + movie + '1.jpg?cache=' + new Date().getTime()}
                         alt={movie}
                         className="img-fluid d-block"
                         onError={this.onImageLoadError} />
