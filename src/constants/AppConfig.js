@@ -3,7 +3,7 @@ const getAppLogo = () => {
 }
 
 const getBrandName = () => {
-  return 'Movie Search Site'
+  return 'Busqueda de Actas'
 }
 
 const getAppFavicon = () => {
