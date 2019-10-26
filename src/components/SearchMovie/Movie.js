@@ -54,7 +54,6 @@ class Movie extends Component {
     }
 
     getClass(key) {
-        console.log('KEY', key)
         if (key % 2 == 0)
             return "row background-griss"
         return "row"
@@ -81,7 +80,7 @@ class Movie extends Component {
                 <div
                     className="fullscreen"
                 >
-                    <h1 className="col-12 pt-10 pb-20">Detalle de la mesa: {acta.numMesa}</h1>
+                    <h1 className="col-12 pt-10 pb-20">Detalle de la mesa: {acta && acta.numMesa}</h1>
                     {acta && acta.resul.map((item, key) => (
                         <div className={this.getClass(key)} key={key}>
                             <div className="label col-6 col-md-6 pt-5 right">{item.sigla}</div>

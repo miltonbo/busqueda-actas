@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export const baseUrl = 'http://localhost:8080/api/';
+//export const baseUrl = 'https://par.com/actas/api/';
+export const baseUrl = 'https://quarzo.io/actas/api/';
 
 export default
    axios.create({

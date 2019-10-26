@@ -9,7 +9,7 @@ import { NotificationManager } from 'react-notifications'
 const INIT_STATE = {
     movies: [],
     loading: false,
-    acta: {}
+    acta: null
 }
 
 export default (state = INIT_STATE, action) => {
@@ -28,7 +28,7 @@ export default (state = INIT_STATE, action) => {
 
 
         case OBTENER_DATOS_MESA_ACTA: 
-            return { ...state, loading: true }
+            return { ...state, loading: true, acta: null }
         
         case OBTENER_DATOS_MESA_ACTA_RESPONSE:
             if (action.payload.response.code !== 'ok') {
