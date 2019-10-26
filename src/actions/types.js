@@ -1,0 +1,3 @@
+// Movies App Actions
+export const SEARCH_MOVIES = 'SEARCH_MOVIES'
+export const SEARCH_MOVIES_RESPONSE = 'SEARCH_MOVIES_RESPONSE'
