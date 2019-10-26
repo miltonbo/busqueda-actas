@@ -2,3 +2,14 @@
     overflow-y: auto;
     height: 70vh;
 }
+
+.fullscreen {
+    width: 100%;
+    overflow-y: scroll;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: white;
+    height: 100%;
+}

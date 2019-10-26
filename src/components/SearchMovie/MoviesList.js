@@ -19,18 +19,8 @@ class MoviesList extends Component {
         NotificationManager.error('Something went wrong.', 'Error')
     }
 
-    loadMovies() {
-        // https://computo.oep.org.bo/resul/imgActa/21191.jpg
-        const movies = [];
-        const begin = 2000;
-        for (let index = begin; index <  begin + 100; index++) {
-            movies.push(index);
-        }
-        return movies;
-    }
-
     render() {
-        const movies = this.loadMovies();
+        const { movies } = this.props;
         return (
             <div className="scrollable col-12">
                 <div className="row row-eq-height">
@@ -41,7 +31,7 @@ class MoviesList extends Component {
                         )
                     )}
                     {!movies || movies.length == 0 &&
-                        <h4>No movies found</h4>
+                        <h4>Ningún acta buscada</h4>
                     }
                 </div>
             </div>

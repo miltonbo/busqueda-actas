@@ -64,6 +64,7 @@
       "react-content-loader": "^3.4.2",
       "react-countup": "^4.0.0",
       "react-custom-scrollbars": "^4.2.1",
+      "react-full-screen": "^0.2.4",
       "react-helmet": "^5.2.0",
       "react-hot-loader": "^4.6.5",
       "react-instantsearch": "^5.3.2",

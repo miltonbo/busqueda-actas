@@ -14,14 +14,12 @@ import api from 'Api'
 
 
 const searchMoviesRequest = async (keyword, errorResult) => {
-    return await api.get('search', {
-        params: { keyword }
-    })
-    .then((response) => (response.data))
-    .catch(error => {
-        console.error('Problems fetching information about movies', error)
-        return errorResult
-    })
+    const movies = [];
+    const begin = keyword;
+    for (let index = begin; index <  begin + 20; index++) {
+        movies.push(index);
+    }
+    return { movies, code: 'ok', message: null };
 }
 
 function* searchMoviesProcess({ payload }) {
@@ -29,7 +27,7 @@ function* searchMoviesProcess({ payload }) {
     let errorResult = {code : 'error', message : 'Problems searching information, please retry or contact the administrator.' }
     try {
         const { keyword } = payload
-        result = yield call(searchMoviesRequest, keyword, errorResult)
+        result = yield call(searchMoviesRequest, parseInt(keyword), errorResult)
     } catch (error) {
         console.log("Something wrong happened", error);
     }
